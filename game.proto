@@ -1,0 +1,26 @@
+syntax = "proto2";
+
+package tutorial;
+
+enum Character {
+    LUIGI = 0;
+    MARIO = 1;
+    DONKEY_KONG = 2;
+    LINK = 3;
+    SAMUS = 4;
+    CAPTAIN_FALCON = 5;
+    NESS = 6;
+    YOSHI = 7;
+    KIRBY = 8;
+    FOX = 9;
+    PIKACHU = 10;
+    JIGGLYPUFF = 11;
+}
+
+message Game {
+    required int32 player_one_id = 1;
+    required Character player_one_character = 2;
+    required int32 player_two_id = 3;
+    required Character player_two_character = 4;
+    required bool player_one_wins = 5;
+}
